@@ -3,7 +3,6 @@
 1. Install Virtual Box
 
 ```bash
-#!/usr/bin/env bash
 sudo apt install virtualbox-qt
 ```
 
