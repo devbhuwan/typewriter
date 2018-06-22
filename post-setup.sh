@@ -8,5 +8,6 @@ echo "Post title : $POST_TITLE"
 
 mkdir ${POST_TITLE}
 touch ${POST_TITLE}/README.adoc
-cp -a template/* ${POST_TITLE}
-sed -i "s/auto-retailer/${POST_TITLE}/g" ${POST_TITLE}/settings.gradle
+cp -r template/* ${POST_TITLE}
+sed -i "s/template/${POST_TITLE}/g" ${POST_TITLE}/settings.gradle
+cp template/.gitignore ${POST_TITLE}/.gitignore

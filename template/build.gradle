@@ -10,8 +10,6 @@ buildscript {
 
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:2.0.3.RELEASE"
-        // TODO: Snapshots are used only for testing purposes
-        classpath "org.springframework.cloud:spring-cloud-contract-gradle-plugin:2.0.0.BUILD-SNAPSHOT"
     }
 }
 
