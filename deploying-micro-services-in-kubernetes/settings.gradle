@@ -2,3 +2,6 @@ rootProject.name = "deploying-micro-services-in-kubernetes"
 
 include(
 )
+include 'order-service'
+include 'payment-service'
+
