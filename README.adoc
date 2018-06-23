@@ -1,7 +1,5 @@
-= developerbhuwan.com
+= Posts on developerbhuwan.com
 Repository for sample examples for articles or posts published on http://www.developerbhuwan.com/
-
-Posts:
 
 |===
 | Post Title | Web Link | Example
