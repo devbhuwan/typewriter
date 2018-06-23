@@ -1,0 +1,11 @@
+[bootJar, bootRun]*.enabled = true
+
+dependencies {
+    compile("org.projectlombok:lombok:1.18.0")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("org.springframework.boot:spring-boot-starter-data-rest")
+    runtime("org.springframework.boot:spring-boot-starter-actuator")
+    runtime("org.springframework.data:spring-data-rest-hal-browser")
+    runtime("com.h2database:h2")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}

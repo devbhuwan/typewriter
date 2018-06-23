@@ -1,0 +1,5 @@
+rootProject.name = "deploying-micro-services-in-kubernetes"
+
+include 'order-service'
+include 'payment-service'
+
