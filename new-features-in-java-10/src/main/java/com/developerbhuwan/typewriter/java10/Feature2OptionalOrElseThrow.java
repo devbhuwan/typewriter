@@ -8,7 +8,7 @@ import java.util.Optional;
  *
  * @author Bhuwan P. Upadhyay
  */
-public class Feature1OptionalOrElseThrow {
+public class Feature2OptionalOrElseThrow {
 
     public static void main(String[] args) {
         Foo foo = null;
@@ -22,6 +22,5 @@ public class Feature1OptionalOrElseThrow {
     private static class Foo {
 
     }
-
 
 }

@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
  *
  * @author Bhuwan P. Upadhyay
  */
-public class Feature2APIForUnmodifiableCollection {
+public class Feature3APIForUnmodifiableCollection {
 
     public static void main(String[] args) {
         usingCopyOf();
