@@ -1,0 +1,88 @@
+= New features in Java 10
+Oracle released the general availability Java 10 on March 20, 2018.
+Key features in the new release include:
+
+- Local-variable type interface: enhances the Java language to extend type interface
+to declarations of local variables with initializers.
+- Parallel Full GC for G1: improves G1 worst-case latencies by making the full GC parallel.
+- Application Class-Data Sharing: optimizes startup time and footprint by extending the existing Class-Data sharing("CDS")
+feature to allow application classes to be placed in the shared archive.
+- Experimental Java-Based JIT Compiler: enables the Java-based JIT compiler, Graal, to be
+used as an experimental JIT compiler on the Linux/x64 platform.
+
+Let's discuss about new features and enhancements in JDK 10.
+
+- Optional.orElseThrow() Method [core-libs/java.util]
+
+In JDK 10, a new method orElseThrow with no-arg has been added to the Optional class.
+```java
+/**
+ * Optional.orElseThrow() Method
+ *
+ * @author Bhuwan P. Upadhyay
+ */
+public class Feature1OptionalOrElseThrow {
+
+    public static void main(String[] args) {
+        Foo foo = null;
+        try {
+            Foo myFoo = Optional.ofNullable(foo).orElseThrow();
+        } catch (NoSuchElementException e) {
+            System.out.print("Exception caught: " + e.getMessage());
+        }
+    }
+
+    private static class Foo {
+
+    }
+
+
+}
+
+```
+
+- APIs for Creating Unmodifiable Collections :
+```java
+/**
+ * APIs for Creating Unmodifiable Collections :
+ * - List.copyOf, Set.copyOf, and Map.copyOf
+ * - Collectors.toUnmodifiableList, Collectors.toUnmodifiableSet, and Collectors.toUnmodifiableMap
+ *
+ * @author Bhuwan P. Upadhyay
+ */
+public class Feature2APIForUnmodifiableCollection {
+
+    public static void main(String[] args) {
+        usingCopyOf();
+        usingStreamOfCollectors();
+    }
+
+    private static void usingCopyOf() {
+        List<String> mutableList = new ArrayList<>();
+        mutableList.add("Foo");
+        List<String> immutableList = List.copyOf(mutableList);
+        try {
+            immutableList.add("Bar");
+        } catch (UnsupportedOperationException ex) {
+            System.out.println("Exception caught: " + ex.getMessage());
+        }
+    }
+
+
+    private static void usingStreamOfCollectors() {
+        List<String> mutableList = new ArrayList<>();
+        mutableList.add("Foo");
+        List<String> immutableList = mutableList.stream().collect(Collectors.toUnmodifiableList());
+        try {
+            immutableList.add("Bar");
+        } catch (UnsupportedOperationException ex) {
+            System.out.println("Exception caught: " + ex.getMessage());
+        }
+    }
+
+}
+```
+
+===== REFERENCES
+- https://www.oracle.com/corporate/pressrelease/Java-10-032018.html
+- http://www.oracle.com/technetwork/java/javase/10-relnote-issues-4108729.html
