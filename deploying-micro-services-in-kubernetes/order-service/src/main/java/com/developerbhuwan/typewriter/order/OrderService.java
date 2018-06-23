@@ -15,8 +15,8 @@ public class OrderService {
     private final OrderRepository repository;
 
     void addNewOrder(ItemId itemId, ItemQuantity quantity) {
-        Order order = repository.save(Order.of(itemId, quantity).create());
-        LOG.info("New order arrived: {}", order);
+        Order order = Order.of(itemId, quantity).create();
+        repository.save(order);
     }
 
 }

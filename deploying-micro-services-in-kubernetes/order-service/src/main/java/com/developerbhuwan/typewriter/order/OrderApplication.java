@@ -28,7 +28,7 @@ public class OrderApplication {
         SpringApplication.run(OrderApplication.class, args);
     }
 
-    @Scheduled(cron = "0 0/1 * 1/1 * ? *")
+    @Scheduled(cron = "*/30 * * * * *") //every 30 seconds
     @EventListener(ApplicationReadyEvent.class)
     public void onReady() {
         LOG.info("------------ Create New Order --------------------");
