@@ -1,3 +1,5 @@
+[bootJar, bootRun]*.enabled = true
+
 dependencies {
     compile("org.projectlombok:lombok:1.18.0")
     compile("org.springframework.boot:spring-boot-starter-data-jpa")

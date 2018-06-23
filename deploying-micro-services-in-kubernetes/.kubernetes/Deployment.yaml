@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploying-micro-services-in-kubernetes
+  labels:
+    app: deploying-micro-services-in-kubernetes
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: deploying-micro-services-in-kubernetes
+      labels:
+        app: deploying-micro-services-in-kubernetes
+    spec:
+      containers:
+      - name: payments
+        image: com.developerbhuwan/payment-service
+        imagePullPolicy: IfNotPresent
+      - name: orders
+        image: com.developerbhuwan/order-service
+        imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: deploying-micro-services-in-kubernetes

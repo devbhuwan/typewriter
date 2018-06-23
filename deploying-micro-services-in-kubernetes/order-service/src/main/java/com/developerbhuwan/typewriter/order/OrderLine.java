@@ -17,9 +17,13 @@ public class OrderLine implements Serializable {
     private Long id;
     @Version
     private Long version;
-    private ItemId itemId;
-    private ItemQuantity quantity;
+    private final ItemId itemId;
+    private final ItemQuantity quantity;
 
+    public OrderLine(ItemId itemId, ItemQuantity quantity) {
+        this.itemId = itemId;
+        this.quantity = quantity;
+    }
 
     @Value
     @Embeddable

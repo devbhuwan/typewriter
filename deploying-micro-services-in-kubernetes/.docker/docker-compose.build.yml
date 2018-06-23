@@ -1,0 +1,16 @@
+version: "3"
+services:
+  order-service:
+    image: com.developerbhuwan/order-service
+    build:
+      context: ../ # root directory for build
+      dockerfile: .docker/spring-boot/Dockerfile
+      args:
+        - JAR_FILE=order-service/build/libs/order-service-1.0-SNAPSHOT.jar
+  payment-service:
+    image: com.developerbhuwan/payment-service
+    build:
+      context: ../
+      dockerfile: .docker/spring-boot/Dockerfile
+      args:
+        - JAR_FILE=payment-service/build/libs/payment-service-1.0-SNAPSHOT.jar
