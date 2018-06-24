@@ -12,6 +12,38 @@ used as an experimental JIT compiler on the Linux/x64 platform.
 
 Let's discuss about new features and enhancements in JDK 10.
 
+- LocalVariableTypeInterface
+
+```java
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+
+/**
+ * LocalVariableTypeInterface
+ *
+ * @author Bhuwan P. Upadhyay
+ */
+public class Feature1LocalVariableTypeInterface {
+
+    public static void main(String[] args) {
+        new Feature1LocalVariableTypeInterface().demo();
+    }
+
+    private void demo() {
+
+        var list = new ArrayList<String>();
+        list.add("Foo");
+        list.add("Bar");
+
+        var value = list.stream().collect(Collectors.joining(","));
+
+        System.out.println("Value :" + value);
+
+    }
+
+}
+```
+
 - Optional.orElseThrow() Method [core-libs/java.util]
 
 In JDK 10, a new method orElseThrow with no-arg has been added to the Optional class.
@@ -86,3 +118,4 @@ public class Feature2APIForUnmodifiableCollection {
 ===== REFERENCES
 - https://www.oracle.com/corporate/pressrelease/Java-10-032018.html
 - http://www.oracle.com/technetwork/java/javase/10-relnote-issues-4108729.html
+- http://openjdk.java.net/projects/amber/LVTIstyle.html
