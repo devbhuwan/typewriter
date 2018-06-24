@@ -1,0 +1,29 @@
+buildscript {
+
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+
+}
+
+group = 'com.developerbhuwan'
+version = getProp('newVersion') ?: '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+sourceCompatibility = JavaVersion.VERSION_1_10.toString()
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.8'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+String getProp(String propName) {
+    return hasProperty(propName) ?
+            (getProperty(propName) ?: System.properties[propName]) : System.properties[propName] ?:
+            System.getenv(propName)
+}
