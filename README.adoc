@@ -7,4 +7,8 @@ Repository for sample examples for articles or posts published on http://www.dev
 | Deploying Micro Services in Kubernetes
 | http://www.developerbhuwan.com/2018/06/23/deploying-micro-services-in-kubernetes/[Blog Post]
 | https://github.com/devbhuwan/typewriter/tree/master/deploying-micro-services-in-kubernetes[Github]
+
+| New features in java 10
+| http://www.developerbhuwan.com/2018/06/23/new-features-in-java-10/
+| https://github.com/devbhuwan/typewriter/tree/master/new-features-in-java-10[Github]
 |===
