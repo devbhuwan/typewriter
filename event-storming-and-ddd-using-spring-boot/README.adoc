@@ -1,11 +1,9 @@
 = Event storming and ddd using spring boot
 
-=== Principle for delivering software faster
+=== Delivering software faster
 * UNDERSTAND
 * DIVIDE
 * IMPLEMENT
-* DEPLOY
-* BUILD VALUE
 
 === Event Storming -> (UNDERSTAND)
 - All we need unlimited space on a wide wall
@@ -47,7 +45,16 @@ change together and are used together should be kept together.
         c. A module fires a command to another module
 
 === IMPLEMENT
-
-
+- Functionally decomposed software helps during its maintenance.
+- Steps:
+    1. Look for spots with a lot of yellow notes(invariants). That indicates we may have much logic in between
+    a command and eventual event. System needs to process complex commands here. This where we can expect sudden
+    changes. We can apply special care, thus for example apply Domain Driven Development techniques or
+    hexagonal architecture.
+    2. Look for spots that contain a few or zero yellow notes. If those are clear and easy to implement and
+    if there is almost nothing between a command and an event, that means the system does not need to do anything complex
+    here. So we should need to be careful and try to avoid accidental complexity.
+    3. Look for the commands and related invariants (blue and yellow notes) on the wall we can
+    identify complete suite of test scenarios and write down them.
 
 
