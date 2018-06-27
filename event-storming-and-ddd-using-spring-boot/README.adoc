@@ -1,0 +1,53 @@
+= Event storming and ddd using spring boot
+
+=== Principle for delivering software faster
+* UNDERSTAND
+* DIVIDE
+* IMPLEMENT
+* DEPLOY
+* BUILD VALUE
+
+=== Event Storming -> (UNDERSTAND)
+- All we need unlimited space on a wide wall
+- Sticky notes
+- Both business and technical people gathered in one room
+
+* Steps:
+    1. Write down what can happen in our domain on orange notes.
+    These are domain events (past tense and no particular order).
+    2. The cause of each event. Domain experts know the cause and most
+    probably it can be categorized to:
+      a. A direct command to a system - blue note next the event
+      b. Another event - in that case we put those events next to each other
+      c. Some period of time that has passed - small note saying time
+      d. Direct message to the system as a query or views -> [read model] - green note
+    3. In next step, we need to know if the cause alone is sufficient for domain event to occur.
+    Maybe there is another condition that have to be met. Maybe more than one. Those condition are
+    called invariants. If so, we write them down on yellow notes and place between events and causes.
+- The technique is lightweight, quick, fun , moreover we will learn about basic business processes.
+
+=== DIVIDE
+- To found boundaries between business modules we can apply the rule of cohesion: things that
+change together and are used together should be kept together.
+- Steps:
+    1. On green notes we will write down the name of a query/view that the system needs to check
+    during processing each invariant. Also, highlight when the answer to that query/view might change
+    the consequence of an event. That way the green notes can be spotted either next to an invariant
+    or next to an event.
+    2. Pattern searching:
+        a. Command `CommandA` is fired and its causes `EventA`
+        b. `EventA` affects view `SomeView`
+        c. `SomeView` is also needed while processing an invariant that process `CommandB`
+        d. That means that `CommandA` and `CommandB` might be good candidates to land in the same module(this is so-called Bounded Context)
+        e. Put those commands (together with invariants and events) next to each other
+    3. Last step, identify how modules communicate with each other. This is so-called context mapping.
+    Integration strategies:
+        a. A module sends a query to another module
+        b. A module listens to events sent by another module
+        c. A module fires a command to another module
+
+=== IMPLEMENT
+
+
+
+
