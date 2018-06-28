@@ -1,5 +1,9 @@
 = The Example : Student Management System
 
-=== Discovering Domain Events
+=== UNDERSTAND -> (Event Storming)
+
+First of all, let's discover domain events on student management system.
+
 image::docs/Discovering Domain Events.jpg["Discovering Domain Events"]
 
+Then
