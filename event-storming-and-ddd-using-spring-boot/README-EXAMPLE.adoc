@@ -6,4 +6,9 @@ First of all, let's discover domain events on student management system.
 
 image::docs/Discovering Domain Events.jpg["Discovering Domain Events"]
 
-Then
+Then, identify cause of each domain event like:
+
+image::docs/Identifying cause of each Domain Event.jpg[Identifying cause of each Domain Event]
+
+
+
