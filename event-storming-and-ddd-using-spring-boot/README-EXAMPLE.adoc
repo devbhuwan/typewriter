@@ -14,5 +14,10 @@ Now, identifying invariants or conditions of each Domain Event
 
 image::docs/Identifying invariants or conditions of each Domain Event.jpg[Identifying invariants or conditions of each Domain Event]
 
+Let's write down the name of a query/view that the system needs to check during processing each invariant.
+
+image::docs/Query-View that the system needs to check during processing each invariant.jpg[Query/View that the system needs to check during processing each invariant]
+
+
 
 
