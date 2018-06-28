@@ -1,0 +1,5 @@
+= The Example : Student Management System
+
+=== Discovering Domain Events
+image::docs/Discovering Domain Events.jpg["Discovering Domain Events"]
+
