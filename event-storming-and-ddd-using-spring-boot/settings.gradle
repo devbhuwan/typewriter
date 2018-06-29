@@ -1,4 +1,6 @@
 rootProject.name = "event-storming-and-ddd-using-spring-boot"
 
 include(
+        'enrollment-model',
+        'fee-management-model'
 )
